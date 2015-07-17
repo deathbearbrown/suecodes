@@ -1,2 +1,6 @@
 _site
 .sass-cache
+/.bundle/
+/_gems/
+/_plugins/
+/node_modules/

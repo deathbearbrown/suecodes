@@ -1,0 +1,41 @@
+---
+layout: default
+---
+<div class="content" id="home">
+  <div id="sidebar-button">
+    <img src="/images/sidebar-button.png">
+  </div>
+  <div id="post-info">
+    <div id="info-container">
+      <h1 id="title">{{ page.title }}</h1>
+      <span id="date">I draw a lot. Here's a small portion of it.</span>
+    </div>
+  </div>
+
+  <div class="post">
+  	<div class="gallery-index">
+		<a href="/comics">
+		    <img style="max-height: 20em; max-width: 20em;" src="/images/comics-thumb.png">
+		</a>
+		<h3><a href="/comics">Comics</a></h3>
+		</div>
+		{% for gallery in page.galleries %}
+  	<div class="gallery-index">
+	    <a href="{{ gallery['gallery'] }}">
+	        <img style="max-height: 20em; max-width: 20em;" src="{{ gallery['gallery'] }}/thumbs/{{ gallery['best_image'] }}">
+	    </a>
+	    <h3><a href="{{ gallery['gallery'] }}">{{ gallery["name"] }}</a></h3>
+	    {{ gallery["images"] | size }} images
+		</div>
+		{% endfor %}
+  </div>
+  <div class="colophon">
+  </div>
+</div>
+
+
+
+
+
+
+

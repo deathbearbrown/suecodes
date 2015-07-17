@@ -167,7 +167,6 @@ a:hover {
 
 .post h2 {
   margin-top: 1.25em;
-  margin-left: -0.5em;
   margin-bottom: 1.25em;
 }
 
@@ -380,3 +379,22 @@ ul.image-portfolio{
 ul.image-portfolio li{ 
   display:inline-block;
 }
+
+.gallery-index,
+.gallery-image-wrapper {
+  height: 350px;
+  width: 200px;
+  display: inline-block;
+  margin: 1em;
+  position: relative;
+  text-align: center;
+}
+.gallery-image {
+  margin: auto;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  max-height: 100%;
+  max-width: 100%;
+}
+

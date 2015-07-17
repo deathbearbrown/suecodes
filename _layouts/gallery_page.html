@@ -1,0 +1,33 @@
+---
+layout: default
+---
+{% assign artclass ='gallery' %}
+
+{% if page.title == 'comics' %} 
+ {% assign freestyle = 'comics' %}
+{% endif %}
+
+<div class="{{ artclass }} content" id="home" >
+  <div id="sidebar-button">
+    <img src="/images/sidebar-button.png">
+  </div>
+  <div id="post-info">
+    <div id="info-container">
+      <h1 id="title">{{ page.title }}</h1>
+      <span id="date"><a href="/{{ site.gallery.dir }}">back to portfolio</a></span>
+    </div>
+  </div>
+
+  <div class="post">
+   {% for image in page.images %}
+    <div class="gallery-image-wrapper">
+        <a name="{{ image }}"></a>
+        <a href="{{ image }}"{% if site.gallery.lightbox %} rel="lightbox[{{ page.gallery }}]"{% endif %}>
+            <img class="gallery-image" src="thumbs/{{ image }}" />
+        </a>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="colophon">
+  </div>
+</div>

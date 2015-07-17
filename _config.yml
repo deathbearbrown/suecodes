@@ -1,3 +1,35 @@
 name: Flex
 markdown: redcarpet
 highlighter: pygments
+gems:
+  - jekyll-gallery-generator
+gallery:
+  # path to the gallery
+  dir: portfolio
+  # title for gallery index
+  title: "Portfolio"
+  # title prefix for gallery page. title=title_prefix+gallery_name
+  title_prefix: ""
+  # field to control sorting of galleries for the index page
+  # (possible values are: title, date_time, best_image)
+  #sort_field: "date_time"
+  # sizes for thumbnails
+  thumbnail_size:
+    x: 250
+    y: 350
+
+exclude: [
+  "node_modules",
+  "build",
+  "styles",
+  "Gemfile",
+  "Gemfile.lock",
+  "README.md",
+  "Gruntfile.js",
+  "report.html",
+  ".jscs.json",
+  ".jshintrc",
+  ".gitattributes",
+  ".gitignore",
+  "package.json"
+]
